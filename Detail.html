@@ -1,0 +1,264 @@
+<!-- Member:6010513069,6010513077 -->
+<!--หน้า Detail หรือหน้าบอกรายละเอียดของสินค้า โดยเมื่อลูกค้าคลิกปุ่มbuy now ที่รูปสินค้าที่สนใจเเล้วหน้านี้ก็จะเเสดงขึ้นมา โดยในหน้านี้นั้นจะเป็นเพียงตัวอย่างเเสดงให้เห็นการออกแบบเท่านั้น สามารถกดไปชมได้ที่ women > รูปภาพสินค้ารูปที่2 มีชื่อสินค้าว่า Loana Shirt -->
+<!DOCTYPE html>
+<html>
+<title>sandger studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu ปุ่มเมนูอยู่ด้านซ้าย จะเป็นสีขาวพอลากเม้าส์ไปคลิกจะขึ้นเป็นสีเหลืองamber เพื่อให้ทราบว่าตอนนี้กำลังจะเลือกปุ่มใด -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+          <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+          <img src="nameshop.jpg"> <!--รูปโลโก้ของร้านชื่อ sandger-->
+        </div>
+    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="index.html" class="w3-bar-item w3-button w3-hover-amber">HOME</a>
+      <a href="New arrival.html" class="w3-bar-item w3-button w3-hover-amber">NEW ARRIVAL</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-hover-amber" id="myBtn">
+        SHOP  <i class="fa fa-caret-down"></i><!--ปุ่มshop จะเป็นตัวหนาเด่น เพราะจะได้ช่วยดึงดูดความสนใจ เเละจะมีลูกศรเล็กๆ คลิกเเล้วจะมีเมนูย่อยขึ้นมาอีก 3 เมนูคือผู้หญิง ผู้ชาย เเละเด็ก(ตามประเภทของเสื้อผ้าที่เราขาย) -->
+        </a>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+            <a href="Women.html" class=" w3-bar-item w3-button w3-hover-amber">Women</a>
+            <a href="Men.html" class=" w3-bar-item w3-button w3-hover-amber">Men</a>
+            <a href="Kids.html" class=" w3-bar-item w3-button w3-hover-amber">Kids</a>
+          </div>
+      </div>
+      <a href="Promotion.html" class="w3-bar-item w3-button w3-hover-amber">PROMOTION</a>
+      <a href="Faq.html" class="w3-bar-item w3-button w3-hover-amber">FAQ</a>
+    </div>
+    <!---3ปุ่มได้เเก่ contact newsletter เเละsubscribe จะอยู่ทางด้านซ้าย เป็นสีขาวพอลากเม้าส์ไปคลิกจะขึ้นเป็นสี khaki เพื่อให้มีความเด่นรองลงมาจากปุ่มเมนูหลัก-->
+    <a href="#footer" class="w3-bar-item w3-button w3-padding w3-hover-khaki">CONTACT</a> 
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-hover-khaki" onclick="document.getElementById('newsletter').style.display='block'">NEWSLETTER</a> 
+    <a href="#footer"  class="w3-bar-item w3-button w3-padding w3-hover-khaki">SUBSCRIBE</a>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+  
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:250px">
+  
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header จะเเสดงชื่อหน้าที่กำลังเปิดอยู่ โดยในหน้านี้จะเเสดงชื่อว่า WOMEN'S หรือสินค้าสำหรับผู้หญิง-->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-left w3-bold">WOMEN'S</p>
+    <p class="w3-right">
+      <a href="Shoppingcart.html" class="w3-button w3-hover-amber fa fa-shopping-cart"></a><!--ปุ่มรูปรถเข็น หมายถึง สินค้าที่ลูกค้าได้เลือกซื้อ เมื่อเลือกเเล้วข้อมูลจะถูกเก็บไปไว้ที่หน้ารถเข็นเพื่อดำเนินการตรวจเช็คเเละชำระเงินต่อไป-->
+      <button class="w3-button w3-hover-amber fa fa-heart"></button><!--ปุ่มรูปหัวใจ หมายถึง สินค้าที่ลูกค้าได้กดชื่นชอบไว้ อาจกลับมาซื้อทีหลัง-->
+      <button class="w3-button w3-hover-amber fa fa-search"></button><!--ปุ่มรูปเเว่นขยาย โดยปุ่มนี้จะเป็นปุ่มค้นหา หากลูกค้าต้องการจะค้นหาอะไร สามารถมากดที่ปุ่มนี้ได้เลย-->
+    </p>
+  </header>
+<!--บรรยาย-->
+<center><b class="w3-container w3-xlarge w3-bold w3-text-black">Loana Shirt </b>
+<i class="w3-text-grey">Go retro with this bold printed jumpsuit!</i><br>
+<p class="w3-text-grey">฿690.00</p>
+</center>
+
+<!--รูปภาพสินค้า-->
+<img src="product3.jpg"class="w-left" style="width:34%">
+
+<!--กล่องรายละเอียดสินค้า (สร้างจากตาราง) โดยจะบอกรายละเอียดของสินค้า สีเเละขนาดให้เลือก พร้อมทั้งปุ่มกดซื้อสินค้าเเละปุ่มชื่นชอบสินค้า -->
+<table class="w3-right" style="width: 50%;"> <!--สร้างกล่องจากตาราง บอกรายละเอียดเพิ่มเติมต่างๆ-->
+    <tr>
+      <th>
+          <p class="w3-center w3-small">SELECT SIZE AND COLOR</p>
+          <div class="w3-container">
+             <button class="w3-button w3-brown w3-text-brown"><br></button>
+             <button class="w3-button w3-deep-orange w3-text-deep-orange"><br></button>
+             <button class="w3-button w3-teal w3-text-teal"><br></button>
+          </div><br>
+          <div class="w3-container">
+            <button class="w3-button w3-white w3-border w3-border-black w3-hover-black">S</button>
+            <button class="w3-button w3-white w3-border w3-border-black w3-hover-black">M</button>
+            <button class="w3-button w3-white w3-border w3-border-black w3-hover-black">L</button>
+          </div>
+          <center><p><button class="w3-button w3-small w3-black  w3-hover-grey" style="padding: 7px 12px;"><i class="fa fa-shopping-cart">&nbsp;&nbsp;</i>ADD TO CART</button></p></center>
+          <center><p><button class="w3-button w3-small w3-black  w3-hover-grey" style="padding: 6px 26px;"><i class="fa fa-heart">&nbsp;&nbsp;</i>MY WISH</button></p></center>
+          <br><br>
+        <!-- ตารางบอกขนาดเเละรายละเอียดของสินค้า-->
+          <div class="w3-bar w3-white " style="width: 70%;">
+            <button class="w3-bar-item w3-button tablink w3-light-grey" onclick="openCity(event,'Size')">Size Guide</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Model')">Model's Size</button>
+            <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Detail')">Details</button>
+          </div>
+          
+          <div id="Size" class="w3-container w3-border city">
+            <p class="w3-text-grey">Size Guide</p>
+            <table class="w3-table w3-bordered">
+                <tr>
+                  <th></th>
+                  <th class="w3-text-grey">S</th>
+                  <th class="w3-text-grey">M</th>
+                  <th class="w3-text-grey">L</th>
+                </tr>
+                <tr>
+                  <td class="w3-text-grey">1.	Bust circumference</td>
+                  <td class="w3-text-grey">38</td>
+                  <td class="w3-text-grey">40</td>
+                  <td class="w3-text-grey">42</td>
+                </tr>
+                <tr>
+                  <td class="w3-text-grey">2.	Length</td>
+                  <td class="w3-text-grey">27</td>
+                  <td class="w3-text-grey">27.5</td>
+                  <td class="w3-text-grey">28</td>
+                </tr>
+              </table> <br>
+              <img src="pt1.jpg" alt="แบบเสื้อ" style="width: 70%;">
+            </div>
+          </div>
+        
+          <div id="Model" class="w3-container w3-border city" style="display:none">
+            <p class="w3-text-grey ">Select size and color to view Model's information</p> 
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+        
+          <div id="Detail" class="w3-container w3-border city" style="display:none">
+                <li class="w3-text-grey w3-left"> Polyester</li><br>
+                <li class="w3-text-grey w3-left"> Heart neckline</li><br>
+                <li class="w3-text-grey w3-left"> Strappy</li><br>
+                <li class="w3-text-grey w3-left"> 3/4 pants</li><br>
+                <li class="w3-text-grey w3-left"> Back zip fastening</li><br>
+                <li class="w3-text-grey w3-left"> Regular fit</li><br>
+                <li class="w3-text-grey w3-left"> Unlined</li><br>
+            <br><br><br><br><br><br><br><br><br><br><br>
+          </div>
+        </div>
+        
+        <script>
+        function openCity(evt, cityName) {
+          var i, x, tablinks;
+          x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" w3-light-grey", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " w3-light-grey";
+        }
+        </script>
+        </th>
+    </tr>
+</table>
+ <!-- Banner -->
+ <div class="w3-container ">
+    <img src="sp1.jpg" alt="Lights"style="width:100%">
+  </div>
+<!-- Footer -->
+<footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> SANDGER </p>
+        <p><i class="fa fa-fw fa-phone"></i> 0044123123</p>
+        <p><i class="fa fa-fw fa-envelope"></i> sandger@mail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+  
